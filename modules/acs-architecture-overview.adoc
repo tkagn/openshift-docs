@@ -18,9 +18,14 @@ image::acs-architecture-ocp.png[High-level {product-title} for {ocp}]
 
 For {product-title} versions 3.69 and older, Scanner is installed only on the cluster where Central is installed.
 
+Figure 2 depicts the architecture in a Kubernetes environment, where you install only the Scanner centrally.
+
+.High level {product-title} architecture for Kubernetes
+image::acs-architecture-kubernetes.png[High-level {product-title} architecture for Kubernetes]
+
 [discrete]
 == Centralized services
-You install Centralized services on a single cluster (*Cluster 1* in Figure 1 and 2). These services includes two main components, Central and Scanner.
+You install Centralized services on a single cluster (*Cluster 1* in Figure 1 and 3). These services includes two main components, Central and Scanner.
 
 * *Central*:
 Central is the {product-title-short} application management interface and services.
@@ -51,9 +56,7 @@ Collector analyzes and monitors container activity on cluster nodes.
 It collects information about container runtime and network activity and sends the collected data to Sensor.
 
 * *Scanner* (only on {ocp} version 3.69.1 and newer):
-On {ocp}, {product-title-short} installs a lightweight version of Scanner on each secured cluster (Figure 1) to enable scanning of images in the integrated OCR.
+On {ocp}, {product-title-short} installs a lightweight version of Scanner on each secured cluster (Figure 3) to enable scanning of images in the integrated OCR.
 
-Figure 2 depicts the architecture in a Kubernetes environment, where you install only the Scanner centrally.
-
-.High level {product-title} architecture for Kubernetes
-image::acs-architecture-kubernetes.png[High-level {product-title} architecture for Kubernetes]
+.High level {product-title} architecture for {ocp}
+image::acs-architecture-ocp.png[High-level {product-title} for {ocp}]
